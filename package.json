@@ -1,0 +1,33 @@
+{
+  "name": "reactjs-search",
+  "version": "0.0.0",
+  "description": "a “MERN-stack” (Mongo, Express, React, Node) search application that uses ReactJS helper functions and the React mounting-lifecycle to query and display articles dynamically based on user searches and optionally store them for later reading",
+  "main": "server.js",
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.11.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BFGriffith/ReactJS-search.git"
+  },
+  "keywords": [
+    "ReactJS",
+    "NodeJS",
+    "ExpressJS",
+    "MongoDB",
+    "axios",
+    "body-parser",
+    "mongoose",
+    "babel"
+  ],
+  "author": "BFGriffith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BFGriffith/ReactJS-search/issues"
+  },
+  "homepage": "https://github.com/BFGriffith/ReactJS-search#readme"
+}
