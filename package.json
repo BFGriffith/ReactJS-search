@@ -1,0 +1,51 @@
+{
+  "name": "reactjs-search",
+  "version": "0.0.0",
+  "description": "a “MERN-stack” (Mongo, Express, React, Node) search application that uses ReactJS helper functions and the React mounting-lifecycle to query and display articles dynamically based on user searches and optionally store them for later reading",
+  "main": "server.js",
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.11.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BFGriffith/ReactJS-search.git"
+  },
+  "keywords": [
+    "ReactJS",
+    "NodeJS",
+    "ExpressJS",
+    "MongoDB",
+    "axios",
+    "body-parser",
+    "mongoose",
+    "babel"
+  ],
+  "author": "BFGriffith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BFGriffith/ReactJS-search/issues"
+  },
+  "homepage": "https://github.com/BFGriffith/ReactJS-search#readme",
+  "dependencies": {
+    "axios": "^0.13.1",
+    "body-parser": "^1.15.2",
+    "core-js": "^2.4.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.8",
+    "morgan": "^1.7.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "webpack": "^1.13.1"
+  }
+}
