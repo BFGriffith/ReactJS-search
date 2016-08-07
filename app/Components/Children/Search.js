@@ -1,7 +1,6 @@
-// Include React
+// include React
 var React = require('react');
 
-// This is the results component
 var Search = React.createClass({
 	render: function(){
 
@@ -18,6 +17,7 @@ var Search = React.createClass({
 
 				</div>
 			</div>
+
 		)
 	}
 });

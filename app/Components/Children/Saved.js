@@ -1,7 +1,6 @@
 // Include React
 var React = require('react');
 
-// This is the results component
 var Saved = React.createClass({
 	render: function(){
 
