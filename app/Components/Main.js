@@ -1,27 +1,39 @@
 var React = require('react');
 
 // sub-components:
-var Search = require('./Children/Search');
 var Saved = require('./Children/Saved');
+var Search = require('./Children/Search');
+var Results = require('./Children/Results');
 
-// Helper Functions:
+// HELPER functions:
 var helpers = require('./utils/helpers.js');
 
 // MAIN Component:
 var Main = React.createClass({
   getInitialState: function(){
 		return {
-			searchTerm: "",
-			results: "",
-			history: []
-		}
-	},
+			search: "",
+			start: "",
+			end: "",
+			someArticles: []
+		};
+	},	
 
 	// function to allow children to update the parent
-	setTerm: function(term){
+	setSearch: function(search) {
 		this.setState({
-			searchTerm: term
-		})
+			search: search
+		});
+	},
+	setStart: function(start) {
+		this.setState({
+			start: start
+		});
+	},
+	setEnd: function(end) {
+		this.setState({
+			end: end
+		});
 	},
 
 	// if the component changes (i.e. if a search is entered)...
@@ -38,7 +50,7 @@ var Main = React.createClass({
 
 						this.setState({
 							results: data
-						})
+						});
 
 						// once result is received, post the search term to history
 						helpers.postHistory(this.state.searchTerm)
@@ -54,14 +66,12 @@ var Main = React.createClass({
 
 											this.setState({
 												history: response.data
-											})
+											});
 										}
-									}.bind(this))
-							}.bind(this)
-						)
+									}.bind(this));
+							}.bind(this));
 					}
-				}.bind(this))
-
+				}.bind(this));
 			}
 	},
 
@@ -75,31 +85,46 @@ var Main = React.createClass({
 
 					this.setState({
 						history: response.data
-					})
+					});
 				}
 			}.bind(this))
 	},
 
 	// RENDER:
 	render: function(){
-
 		return(
 
-			<div className="container">
+			<div className='container'>
+
+				<div className='row'>
+					<div className="col-xs-12">
+            <br />
+						<div className='panel panel-default mainHeaderContainer'>
+						  <div className='panel-heading'>
+							  <h1 className='text-center'>ReactJS &#10165; news SEARCH</h1>
+							</div>
+							<div className='panel-body'>
+							  <h3 className='text-center'>Please enter your query parameters below.</h3>
+							</div>
+						</div>
+
+          </div>
+				</div>
 
 				<div className="row">
 
-					<div className="jumbotron">
-						<h2 className="text-center">SEARCH</h2>
-						<p className="text-center"><em>Enter your query parameters.</em></p>
+					<div className="col-xs-12">
+					
+						<Search searchFunction={this.searchFunction} setSearch={this.setSearch} 
+					  setStart={this.setStart} setEnd={this.setEnd} articles={this.state.someArticles}/>
+
 					</div>
 
 				</div>
 
 			</div>
 		)
-	}
-});
+	} // END render
 }); // END Main
 
 module.exports = Main;
