@@ -1,6 +1,6 @@
 {
   "name": "reactjs-search",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a “MERN-stack” (Mongo, Express, React, Node) search application that uses ReactJS helper functions and the React mounting-lifecycle to query and display articles dynamically based on user searches and optionally store them for later reading",
   "main": "server.js",
   "engines": {
